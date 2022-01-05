@@ -39,6 +39,8 @@ def has_full_obj(circle):
     if circle == None:
         return False
     (x,y), radius = circle
+    if radius < 20:
+        return False
     if x - radius < 0 or x + radius > width:
         return False
     if y - radius < 0 or y + radius > height:
